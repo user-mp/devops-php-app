@@ -12,5 +12,5 @@ COPY . /var/www/html/
 EXPOSE 80
 
 # Restart the web server (Apache) to serve your PHP code
-CMD ["apache2-foreground"]
+CMD ["php", "-S", "0.0.0.0:80", "-t", "/var/www/html"]
 
